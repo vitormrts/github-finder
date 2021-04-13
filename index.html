@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="./src/css/styles.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <header class="container__header">
+            <div class="container__header-content">
+                <a href="https://github.com" rel="external" target="_blank">
+                    <img src="./src/images/assets/logo.png" alt="GitHub logo">
+                    <span>Search</span>
+                </a>
+                <nav class="container__navbar">
+                    <ul class="container__list">
+                        <li class="container__item"><a href="#">Home</a></li>
+                        <li class="container__item"><a href="#">Sobre</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="content">
+            <main class="content__main">
+                <form action="/" class="content__form">
+                    <fieldset class="content__input-group">
+                        <label for="user"></label>
+                        <input type="text" name="user" id="user" placeholder="Pesquisar um usuário">
+                    </fieldset>
+                    <button id="search-button">Pesquisar</button>
+                </form>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
