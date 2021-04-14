@@ -39,7 +39,24 @@ const Form = {
     }
 }
 
+const Menu = {
+    toggle() {
+        let menu = document.querySelector('.container__menu-section');
+        const status = menu.classList.contains('active')
+
+        if (status) {
+            menu.classList.remove('active')
+            document.body.style.overflow = 'initial'
+        } else {
+            menu.classList.add('active')
+            document.body.style.overflow = 'hidden'
+        }
+    }
+}
+
 document.querySelector("#search-button").addEventListener("click", (event) => {
     event.preventDefault()
     showUser();
 })
+
+document.querySelector('.container__menu-section').addEventListener("click", Menu.toggle)
