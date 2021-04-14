@@ -5,7 +5,8 @@
 }
 
 :root {
-    --color-primary: rgb(86, 118, 106)
+    --color-primary: rgb(0, 53, 122);
+    --color-text: rgb(0, 32, 75);
 }
 
 html {
@@ -20,7 +21,7 @@ html {
     justify-content: center;
 
     background-color: var(--color-primary);
-    padding: 1.7rem 0;
+    padding: 1.4rem 0;
 }
 
 .container__header-content {
@@ -134,4 +135,209 @@ html {
 
 .content__form > button:hover {
     opacity: 1;
+}
+
+.content__user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 90%;
+    max-width: 1200px;
+
+    padding: 3rem 0;
+}
+
+.content__user ul {
+    list-style: none;
+}
+
+.content__profile {
+    width: 20rem;
+
+    height: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.content__info {
+    width: 100%;
+}
+
+.content__name {
+    color: var(--color-text);
+
+    font-size: 1.8rem;
+    font-weight: normal;
+
+    text-align: center;
+
+    margin-top: 10rem;
+    
+}
+
+.content__avatar {
+    margin: 2.2rem 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content__avatar img {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+
+    object-fit: cover;
+    border: 4px solid var(--color-primary);
+
+}
+
+.content__info-list {
+    width: 100%;
+}
+
+.content__info-item {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.content__info-item img {
+    width: 1.5rem;
+}
+
+.content__info p {
+    margin-left: 1rem;
+}
+
+.content__info-item p span {
+    color: var(--color-text);
+
+    margin-right: 0.7rem;
+}
+
+.content__view-profile {
+    border: 0;
+    background-color: var(--color-primary);
+    opacity: 0.8;
+
+    font-size: 1.2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    margin-top: 3rem;
+
+    border-radius: 8px;
+    
+    transition: 0.2s;
+
+    cursor: pointer;
+}
+
+.content__view-profile:hover {
+    opacity: 1;
+}
+
+.content__view-profile a {
+    color: white;
+    text-decoration: none;
+}
+
+.content__repositories {
+    margin-left: 25rem;
+}
+
+.content__repositories-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 0.8rem;
+}
+
+.content__repositories-top > div:last-child  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 1rem;
+}
+
+.content__repositories-top > div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content__repositories-top img {
+    width: 2rem;
+}
+
+.content__repositories-top > div > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 0.7rem;
+
+
+    color: rgb(255, 255, 255);
+
+    border-radius: 5px;
+}
+
+.content__repositories-title {
+    font-size: 2.0rem;
+    color: whitesmoke;
+
+    margin-left: 1.5rem;
+}
+
+#div-stars {
+    background-color: rgb(255, 255, 31);
+    color: rgb(27, 27, 27);
+}
+
+#div-issues {
+    background-color: rgb(255, 31, 31)
+}
+
+#div-forks {
+    background-color: rgb(38, 60, 255)
+}
+
+.content__repositories-list a {
+    text-decoration: none;
+}
+
+.content__repositories-item {
+    background-color: var(--color-primary);
+
+    border-radius: 10px;
+    padding: 3rem;
+
+    opacity: 0.8;
+
+    transition: 0.2s;
+
+    cursor: pointer;
+}
+
+.content__repositories-item:hover {
+    opacity: 1;
+
+    transform: scale(1.05);
+}
+
+.content__repositories-item:not(:first-child) {
+    margin-top: 3rem;
+}
+
+.content__repositories-description {
+    line-height: 1.7;
+
+    color: white;
 }

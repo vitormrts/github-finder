@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="./src/css/styles.css">
 
-    <title>Document</title>
+    <title>GitHub Finder</title>
 </head>
 <body>
     <div class="container">
@@ -18,7 +18,7 @@
             <div class="container__header-content">
                 <a href="https://github.com" rel="external" target="_blank">
                     <img src="./src/images/assets/logo.png" alt="GitHub logo">
-                    <span>Search</span>
+                    <span>Finder</span>
                 </a>
                 <nav class="container__navbar">
                     <ul class="container__list">
@@ -29,7 +29,7 @@
             </div>
         </header>
         <div class="content">
-            <main class="content__main">
+            <!-- <main class="content__main">
                 <form action="/" class="content__form">
                     <fieldset class="content__input-group">
                         <label for="user"></label>
@@ -37,8 +37,76 @@
                     </fieldset>
                     <button id="search-button">Pesquisar</button>
                 </form>
+            </main> -->
+            <main class="content__user">
+                <aside class="content__profile">
+                    <h3 class="content__name">Vitor Martins Cruz</h3>
+                    <div class="content__avatar">
+                        <img src="/photo.jpeg" alt="Avatar">
+                    </div>
+                    <div class="content__info">
+                        <ul class="content__info-list">
+                            <li class="content__info-item">
+                                <img src="./src/images/assets/following.svg" alt="Seguindo">
+                                <p><span>Seguindo:</span>8</p>
+                            </li>
+
+                            <li class="content__info-item">
+                                <img src="./src/images/assets/followers.svg" alt="Seguidores">
+                                <p><span>Seguidores:</span>2</p>
+                            </li>
+
+
+                            <li class="content__info-item">
+                                <img src="./src/images/assets/star.svg" alt="Estrelas">
+                                <p><span>Estrelas:</span>8</p>
+                            </li>
+
+                            <li class="content__info-item">
+                                <img src="./src/images/assets/org.svg" alt="Organização">
+                                <p><span>Organização:</span>Universidade de São Paulo</p>
+                            </li>
+
+                            <li class="content__info-item">
+                                <img src="./src/images/assets/city.svg" alt="Cidade">
+                                <p><span>Localização:</span>São Paulo, SP - Brazil</p>
+                            </li>
+
+                            <button class="content__view-profile"><a href="#">Ver Perfil</a></button>
+                        </ul>
+                    </div>
+                </aside>
+
+                <section class="content__repositories">
+                    <ul class="content__repositories-list">
+                        <a href="#">
+                            <li class="content__repositories-item">
+                                <div class="content__repositories-top">
+                                    <div>
+                                        <img src="./src/images/assets/folder.svg" alt="Repositorio">
+                                        <h4 class="content__repositories-title">Repositorio 1</h4>
+                                    </div>
+                                    <div>
+                                        <div id="div-stars">
+                                            Estrelas: 0
+                                        </div>
+                                        <div id="div-issues">
+                                            Issues: 0
+                                        </div>
+                                        <div id="div-forks">
+                                            Forks: 0
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="content__repositories-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quia, ratione, voluptatum enim sequi voluptatem officia optio dolor, doloremque reprehenderit error. Provident, illum esse quo architecto dolore pariatur ab repudiandae.</p>
+                            </li>
+                        </a>
+                    </ul>
+                </section>
             </main>
         </div>
     </div>
+
+    <script src="./main.js"></script>
 </body>
 </html>
