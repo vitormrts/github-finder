@@ -1,0 +1,43 @@
+.content__input-group {
+    border: 0;
+}
+
+.content__input-group label, input, button{
+    width: 100%;
+}
+
+.content__input-group > input {
+    border: 0;
+
+    padding: 1rem;
+    border-radius: 5px;
+
+    margin-bottom: 3rem;
+
+    outline-color: var(--color-primary);
+
+    font-size: 1.3rem;
+    color: var(--color-primary);
+}
+
+.content__form > button {
+    background-color: var(--color-primary);
+    opacity: 0.7;
+    border: 0;
+
+    padding: 2rem 5rem;
+
+    cursor: pointer;
+
+    font-size: 2rem;
+    color: white;
+    border-radius: 5px;
+
+    transition: 0.3s;
+}
+
+.content__form > button:hover {
+    opacity: 1;
+
+    transform: scale(1.05);
+}

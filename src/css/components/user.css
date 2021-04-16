@@ -1,0 +1,15 @@
+.content__main {
+    width: 90%;
+    max-width: 800px;
+}
+
+.content__user {
+    width: 90%;
+    max-width: 800px;
+
+    padding: 3rem 0 6rem 0;
+}
+
+.content__user ul {
+    list-style: none;
+}
