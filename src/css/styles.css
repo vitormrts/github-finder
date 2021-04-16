@@ -324,6 +324,13 @@ html {
     text-align: center;
 }
 
+.content__error {
+    color: rgb(253, 65, 65);
+    font-weight: normal;
+
+    text-align: center;
+}
+
 .content__avatar {
     margin: 2.2rem 0;
 
@@ -365,6 +372,10 @@ html {
 
 .content__info-item img {
     width: 1.5rem;
+    height: 1.5rem;
+
+    border: none;
+    border-radius: 0;
 }
 
 .content__info p {

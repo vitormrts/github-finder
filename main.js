@@ -10,7 +10,7 @@ const API = {
 const User = {
     async fetchUserData(user) {
         const profileResponse = await fetch(`${Url.link}/${user}?client_id=${API.client_id}&client_secret=${API.client_secret}`)
-        const reposResponse = await fetch(`${Url.link}/${user}/repos?per_page=10&client_id=${API.client_id}&client_secret=${API.client_secret}`)
+        const reposResponse = await fetch(`${Url.link}/${user}/repos?per_page=30&client_id=${API.client_id}&client_secret=${API.client_secret}`)
     
         const profile = await profileResponse.json()
         const repos = await reposResponse.json()
@@ -114,43 +114,69 @@ const DOM = {
     },
 
     innerHTMLUser(user) {
-        const html = `
-        <h3 class="content__name">${user.name}</h3>
-        <div class="content__avatar">
-            <img src="${user.picture}" alt="Avatar">
-            <p class="content__bio">${user.bio}</div>
-        </div>
-        <div class="content__info">
-            <ul class="content__info-list">
-                <li class="content__info-item">
-                    <img src="./src/images/assets/following.svg" alt="Seguindo">
-                    <p><span>Seguindo:</span>${user.following}</p>
-                </li>
+        let html = ``
 
-                <li class="content__info-item">
-                    <img src="./src/images/assets/followers.svg" alt="Seguidores">
-                    <p><span>Seguidores:</span>${user.followers}</p>
-                </li>
+        if (user.login) {
+            if (user.name) {
+                html = `<h3 class="content__name">${user.name}</h3>`
+            }
 
-                <li class="content__info-item">
-                    <img src="./src/images/assets/folder-blue.svg" alt="Repositorios">
-                    <p><span>Repositórios públicos:</span>${user.public_repos}</p>
-                </li>
+            html += `
+            <div class="content__avatar">
+                <img src="${user.picture}" alt="Avatar">`
 
+            if (user.bio) {
+                html += `<p class="content__bio">${user.bio}</div>
+                </div>`
+            }
+
+
+            html += `
+            
+            <div class="content__info">
+                <ul class="content__info-list">
+                    <li class="content__info-item">
+                        <img src="./src/images/assets/following.svg" alt="Seguindo">
+                        <p><span>Seguindo:</span>${user.following}</p>
+                    </li>
+    
+                    <li class="content__info-item">
+                        <img src="./src/images/assets/followers.svg" alt="Seguidores">
+                        <p><span>Seguidores:</span>${user.followers}</p>
+                    </li>
+    
+                    <li class="content__info-item">
+                        <img src="./src/images/assets/folder-blue.svg" alt="Repositorios">
+                        <p><span>Repositórios públicos:</span>${user.public_repos}</p>
+                    </li>`
+            
+            if (user.company) {
+                html += `                    
                 <li class="content__info-item">
                     <img src="./src/images/assets/org.svg" alt="Organização">
                     <p><span>Organização:</span>${user.company}</p>
                 </li>
+                `
+            }
 
-                <li class="content__info-item">
-                    <img src="./src/images/assets/city.svg" alt="Cidade">
-                    <p><span>Localização:</span>${user.location}</p>
-                </li>
+            if (user.location) {
+                html += `            <li class="content__info-item">
+                <img src="./src/images/assets/city.svg" alt="Cidade">
+                <p><span>Localização:</span>${user.location}</p>
+            </li> `
+            }
 
-                <a href="${user.url}"><button class="content__view-profile">Ver Perfil</button></a>
+
+            html +=  `<a href="${user.url}"><button class="content__view-profile">Ver Perfil</button></a>
             </ul>
-        </div>`
+        </div>` 
+    
 
+        } else {
+            html = `<small class="content__error">Este usuário não existe.</small>`
+        }
+
+        
         return html;
     },
 
